@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ff4500, #ffa07a, #ffefd5);
+}
+
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #ff4500, #ffa07a, #ffefd5);
+    background-size: 300% 300%;
+    animation: gradient-animation 8s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.pokemon-card {
+    cursor: pointer;
+    width: 350px;
+    height: 500px;
+    background-color: #c6a10d;
+    border: 5px solid #f39c12;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+}
+
+.pokemon-card__highlight {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.4), transparent);
+    mix-blend-mode: overlay;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.pokemon-card__image {
+    background-color: #ff6347;
+    text-align: center;
+    padding: 20px;
+    z-index: 2;
+}
+
+.pokemon-card__image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.pokemon-card__details {
+    padding: 20px;
+    text-align: center;
+    z-index: 2;
+}
+
+.pokemon-card__name {
+    font-size: 2rem;
+    margin: 10px 0;
+    color: #8b0000;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.pokemon-card__hp {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #402424;
+}
+
+.pokemon-card__type {
+    font-size: 1.2rem;
+    margin: 5px 0;
+    color: #702710;
+}
+
+.pokemon-card__attacks {
+    font-size: 1rem;
+    margin-top: 10px;
+    color: #333;
+}
+
+.pokemon-card__attack {
+    margin-bottom: 10px;
+}
+
+.pokemon-card__info {
+    font-size: 0.9rem;
+    margin-top: 10px;
+    color: #444;
+}
+
+.pokemon-card__weakness,
+.pokemon-card__resistance,
+.pokemon-card__retreat {
+    margin: 5px 0;
+}
+
+.pokemon-card__footer {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.pokemon-card__set {
+    text-align: left;
+}
